@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   ssmdb2:
-    image: mysql:latest
+    image: biarms/mysql:latest
     restart: always
     environment:
       MYSQL_DATABASE: 'ssmdb2'
