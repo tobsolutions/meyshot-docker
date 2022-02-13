@@ -1,0 +1,1 @@
+echo "- `date -u` 10min.sh" >> /proc/1/fd/1

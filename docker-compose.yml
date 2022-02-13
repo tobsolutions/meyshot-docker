@@ -1,0 +1,44 @@
+version: '3.3'
+services:
+  ssmdb2:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'ssmdb2'
+      MYSQL_USER: 'otto'
+      MYSQL_PASSWORD: 'otto'
+      MYSQL_ROOT_PASSWORD: 'mc4hct'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+  ssmdb2_myadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8080:80'
+    links:
+      - ssmdb2
+    environment:
+      PMA_HOST: 'ssmdb2'
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+  cronmaster2:
+    image: alpine:3.8
+    volumes:
+      - ./cronmaster:/usr/local
+    command: /usr/local/startup.sh
+  stream0:
+    restart: always
+    image: kvaps/mjpg-streamer
+    devices:
+      - /dev/ttyp0
+    ports:
+      - 8090:8090
+    command: -i "/usr/lib64/input_uvc.so -y -d /dev/video0 -r 320x240 -f 10" -o "/usr/lib64/output_http.so -p 8090 -w /usr/share/mjpeg-streamer/www/ -c admin:admin"
+
+# Names our volume
+volumes:
+  my-db:
