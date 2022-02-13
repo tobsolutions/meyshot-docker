@@ -1,11 +1,11 @@
 #!/bin/sh
 
 echo "- `date -u` starting startup.sh.." >> /proc/1/fd/1
-echo  -e  "$(crontab -l)\n*/1 * * * * /usr/local/1min.sh" | crontab -
-echo  -e  "$(crontab -l)\n*/5 * * * * /usr/local/5min.sh" | crontab -
-echo  -e  "$(crontab -l)\n*/10 * * * * /usr/local/10min.sh" | crontab -
-echo  -e  "$(crontab -l)\n*/15 * * * * /usr/local/15min.sh" | crontab -
-echo  -e  "$(crontab -l)\n*/30 * * * * /usr/local/30min.sh" | crontab -
+echo  -e  "$(crontab -l)\n*/1 * * * * /home/meyshot/1min.sh" | crontab -
+echo  -e  "$(crontab -l)\n*/5 * * * * /home/meyshot/5min.sh" | crontab -
+echo  -e  "$(crontab -l)\n*/10 * * * * /home/meyshot/10min.sh" | crontab -
+echo  -e  "$(crontab -l)\n*/15 * * * * /home/meyshot/15min.sh" | crontab -
+echo  -e  "$(crontab -l)\n*/30 * * * * /home/meyshot/30min.sh" | crontab -
 
 echo "- `date -u` crontab -l"
 crontab -l

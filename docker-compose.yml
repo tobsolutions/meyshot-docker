@@ -28,8 +28,8 @@ services:
   cronmaster2:
     image: alpine:3.8
     volumes:
-      - ./cronmaster:/usr/local
-    command: /usr/local/startup.sh
+      - ./cronmaster:/home/meyshot
+    command: /home/meyshot/startup.sh
   stream0:
     restart: always
     image: kvaps/mjpg-streamer
