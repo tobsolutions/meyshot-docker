@@ -15,7 +15,7 @@ services:
     volumes:
       - my-db:/var/lib/mysql
   ssmdb2_myadmin:
-    image: phpmyadmin/phpmyadmin
+    image: ebspace/armhf-phpmyadmin
     ports:
       - '8088:80'
     links:
@@ -32,12 +32,14 @@ services:
     command: /usr/local/startup.sh
   stream0:
     restart: always
-    image: kvaps/mjpg-streamer
+    image: badsmoke/mjpg-streamer:1.0.0
+    environment:
+      - ENV_RESOLUTION=1280x720
+      - ENV_FPS=30
     devices:
       - /dev/video0
     ports:
-      - 8090:8090
-    command: -i "/usr/lib64/input_uvc.so -y -d /dev/video0 -r 320x240 -f 10" -o "/usr/lib64/output_http.so -p 8090 -w /usr/share/mjpeg-streamer/www/ -c admin:admin"
+      - 8090:8080
 
 # Names our volume
 volumes:
