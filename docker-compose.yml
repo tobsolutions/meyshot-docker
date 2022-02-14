@@ -32,10 +32,7 @@ services:
     command: /usr/local/startup.sh
   stream0:
     restart: always
-    image: badsmoke/mjpg-streamer:1.0.1
-    environment:
-      - ENV_RESOLUTION=1280x720
-      - ENV_FPS=30
+    image: patsoffice/mjpg-streamer
     devices:
       - /dev/video0
     ports:
