@@ -34,7 +34,7 @@ services:
     restart: always
     image: patsoffice/mjpg-streamer
     devices:
-      - /dev/video1:/dev/video0
+      - /dev/video0:/dev/video0
     environment: 
       MJPEG_STREAMER_INPUT: '-y -n -r 1280x720'
     ports:
