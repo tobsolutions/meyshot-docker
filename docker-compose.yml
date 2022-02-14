@@ -37,7 +37,7 @@ services:
       - /dev/video0:/dev/video0
     ports:
       - 8090:8080
-    command: mjpg_streamer -i 'input_uvc.so -d /dev/video0 -r 1280x720 -f 30' -o 'output_http.so -w /usr/local/share/mjpg-streamer/www'
+    command: mjpg_streamer -i 'input_uvc.so -d /dev/video0 -r 1280x720 -f 1' -o 'output_http.so -w /usr/local/share/mjpg-streamer/www'
 
 # Names our volume
 volumes:
