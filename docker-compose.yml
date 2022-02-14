@@ -36,7 +36,7 @@ services:
     devices:
       - /dev/video0:/dev/video0
     environment: 
-      MJPEG_STREAMER_INPUT: '-y -n -r 1280x720'
+      MJPEG_STREAMER_INPUT: '-y -n -r 1280x720 -f 30 -yuv'
     ports:
       - 8090:8080
 
