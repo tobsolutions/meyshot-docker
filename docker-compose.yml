@@ -34,7 +34,7 @@ services:
     restart: always
     image: patsoffice/mjpg-streamer
     devices:
-      - /dev/bus/usb/001/005:/dev/video0
+      - /dev/media3:/dev/video0
     ports:
       - 8090:8080
 
