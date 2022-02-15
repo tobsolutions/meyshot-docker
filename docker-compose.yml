@@ -6,7 +6,7 @@ services:
       - '80:80'
     volumes:
      - ./dashboard:/usr/local/apache2/htdocs:ro
-     - ./dashboard:my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+     - ./dashboard/my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
   dockergui:
     image: hypriot/rpi-dockerui
     privileged: true
