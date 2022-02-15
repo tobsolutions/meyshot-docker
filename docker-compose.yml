@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   www:
+    restart: always
     image: httpd:latest
     ports:
       - '80:80'
@@ -8,6 +9,7 @@ services:
      - ./dashboard:/usr/local/apache2/htdocs:ro
      - ./dashboard/my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
   dockergui:
+    restart: always
     image: hypriot/rpi-dockerui
     privileged: true
     volumes:
