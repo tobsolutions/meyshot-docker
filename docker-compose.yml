@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   dockergui:
-    image: uifd/ui-for-docker
+    image: hypriot/rpi-dockerui
     privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
