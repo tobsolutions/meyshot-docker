@@ -1,5 +1,11 @@
 version: '3.3'
 services:
+  www:
+    image: nginx
+    port:
+      - '80:80'
+    volumes:
+     - ./dashboard:/usr/share/nginx/html:ro
   dockergui:
     image: hypriot/rpi-dockerui
     privileged: true
