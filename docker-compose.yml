@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   dockergui:
-    image: kevana/ui-for-docker
+    build: ./ui-for-docker
     privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
