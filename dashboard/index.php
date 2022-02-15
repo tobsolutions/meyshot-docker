@@ -73,15 +73,21 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item active">
-        <a class="nav-link" href="../phpmyadmin" target="_blank">
+        <a class="nav-link" href=":8088/phpmyadmin" target="_blank">
           <i class="fas fa-database"></i>
           <span>phpMyAdmin</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="../vis" target="_blank">
+        <a class="nav-link" href=":8099/?action=stream" target="_blank">
           <i class="fas fa-database"></i>
-          <span>Beispiel-VIS</span></a>
+          <span>stream0</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href=":9000" target="_blank">
+          <i class="fas fa-database"></i>
+          <span>DockerGUI</span></a>
       </li>
 
       <!-- Divider -->
