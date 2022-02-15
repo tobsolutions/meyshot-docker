@@ -79,7 +79,7 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://raspberrypi.local:8099/?action=stream" target="_blank">
+        <a class="nav-link" href="http://raspberrypi.local:8090/?action=stream" target="_blank">
           <i class="fas fa-database"></i>
           <span>stream0</span></a>
       </li>
