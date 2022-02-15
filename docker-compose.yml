@@ -1,5 +1,13 @@
 version: '3.3'
 services:
+  dockergui:
+    image: kevana/ui-for-docker
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '9000:9000'
+    command: uifd/ui-for-docker
   ssmdb2:
     image: biarms/mysql:latest
     restart: always
@@ -24,14 +32,14 @@ services:
       PMA_HOST: 'ssmdb2'
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
-    restart: always
-  cronmaster2:
+    restart: unless-stopped
+  cronmaster:
     image: alpine:3.8
     volumes:
       - ./cronmaster:/usr/local
     command: /usr/local/startup.sh
   stream0:
-    restart: always
+    restart: unless-stopped
     image: patsoffice/mjpg-streamer
     devices:
       - /dev/video0:/dev/video0
