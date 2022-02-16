@@ -54,8 +54,8 @@
 
     <div class="row">
       <div class="col-sm-9">
-        <div class="row">
-          <img width="100%" heigth="auto" src="http://192.168.178.143:8090/?action=stream" />    
+        <div class="row" style="width: 100%; heigth: auto;">
+          <img src="http://192.168.178.143:8090/?action=stream" />    
         </div>
       </div>      
       <div class="col-sm-3">
