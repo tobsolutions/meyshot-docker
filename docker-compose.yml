@@ -20,9 +20,6 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_DATABASE: 'ssmdb2'
-      MYSQL_USER: 'otto'
-      MYSQL_PASSWORD: 'otto'
       MYSQL_ROOT_PASSWORD: 'mc4hct'
     ports:
       - '3306:3306'
