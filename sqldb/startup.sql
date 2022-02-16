@@ -4,5 +4,5 @@ CREATE DATABASE IF NOT EXISTS `_upload`;
 CREATE DATABASE IF NOT EXISTS `_SSMDB2`;
 
 # create root user and grant rights
-CREATE USER 'otto'@'localhost' IDENTIFIED BY 'otto';
+CREATE USER 'otto'@'%' IDENTIFIED BY 'otto';
 GRANT ALL PRIVILEGES ON *.* TO 'otto'@'%';
