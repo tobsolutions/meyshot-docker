@@ -36,7 +36,7 @@ services:
     ports:
       - '8088:80'
     links:
-      - ssmdb2
+      - sqldb
     environment:
       PMA_HOST: 'ssmdb2'
       PMA_PORT: 3306
