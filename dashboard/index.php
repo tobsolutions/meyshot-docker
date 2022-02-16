@@ -73,19 +73,19 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://raspberrypi.local:8088/phpmyadmin" target="_blank">
+        <a class="nav-link" href="http://192.168.178.143:8088/phpmyadmin" target="_blank">
           <i class="fas fa-database"></i>
           <span>phpMyAdmin</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://raspberrypi.local:8090/?action=stream" target="_blank">
+        <a class="nav-link" href="http://192.168.178.143:8090/?action=stream" target="_blank">
           <i class="fas fa-database"></i>
           <span>stream0</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://raspberrypi.local:9000" target="_blank">
+        <a class="nav-link" href="http://192.168.178.143:9000" target="_blank">
           <i class="fas fa-database"></i>
           <span>DockerGUI</span></a>
       </li>
