@@ -35,7 +35,7 @@ services:
     links:
       - sqldb
     environment:
-      PMA_HOST: 'ssmdb2'
+      PMA_HOST: 'sqldb'
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
     restart: always
