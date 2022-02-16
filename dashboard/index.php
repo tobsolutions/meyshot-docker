@@ -90,6 +90,12 @@
           <span>DockerGUI</span></a>
       </li>
 
+      <li class="nav-item active">
+        <a class="nav-link" href="http://192.168.178.143/vis" target="_blank">
+          <i class="fas fa-database"></i>
+          <span>VIS</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
