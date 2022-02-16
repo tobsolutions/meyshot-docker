@@ -73,7 +73,7 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.178.143:8088/phpmyadmin" target="_blank">
+        <a class="nav-link" href="http://192.168.178.143:8088" target="_blank">
           <i class="fas fa-database"></i>
           <span>phpMyAdmin</span></a>
       </li>
