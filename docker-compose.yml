@@ -17,7 +17,7 @@ services:
     ports:
       - '9000:9000'
   ssmdb2:
-    image: biarms/mysql:latest
+    image: mysql:latest
     restart: always
     environment:
       MYSQL_DATABASE: 'ssmdb2'
@@ -31,7 +31,7 @@ services:
     volumes:
       - my-db:/var/lib/mysql
   ssmdb2_myadmin:
-    image: ebspace/armhf-phpmyadmin
+    image: phpmyadmin
     ports:
       - '8088:80'
     links:
@@ -40,7 +40,7 @@ services:
       PMA_HOST: 'ssmdb2'
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
-    restart: unless-stopped
+    restart: always
   cronmaster:
     image: alpine:3.8
     volumes:
