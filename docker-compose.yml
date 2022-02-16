@@ -16,7 +16,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - '9000:9000'
-  ssmdb2:
+  sqldb:
     image: mysql:latest
     restart: always
     environment:
@@ -30,7 +30,8 @@ services:
       - '3306'
     volumes:
       - my-db:/var/lib/mysql
-  ssmdb2_myadmin:
+      - ./sqldb:/docker-entrypoint-initdb.d
+  sqldb_myadmin:
     image: phpmyadmin
     ports:
       - '8088:80'
