@@ -53,11 +53,16 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-12">
-        <div class="row standanzeige">
+      <div class="col-sm-9">
+        <div class="row">
           <img src="http://192.168.178.143:8090/?action=stream" />    
         </div>
-      </div>       
+      </div>      
+      <div class="col-sm-3">
+        <div class="row">
+          <span>Hallo Welt!</span>   
+        </div>
+      </div>   
   </div>
 
   <script src="js/jquery-1.10.2.min.js"></script>
