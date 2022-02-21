@@ -19,5 +19,8 @@ apk update
 echo "- `date -u` apk add mysql-client"
 apk add mysql-client
 
+echo "- `date -u` mkdir /usr/local/bin"
+mkdir /usr/local/bin
+
 echo "- `date -u` crond -f"
 crond -f
