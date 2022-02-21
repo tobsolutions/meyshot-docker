@@ -55,7 +55,7 @@
     <div class="row">
       <div class="col-sm-9">
         <div class="row">
-          <img style="width: 100%; height: auto;" src="http://192.168.178.143:8090/?action=stream" />    
+          <img style="width: 100%; height: auto;" src="http://192.168.178.222:8090/?action=stream" />    
         </div>
       </div>      
       <div class="col-sm-3">
