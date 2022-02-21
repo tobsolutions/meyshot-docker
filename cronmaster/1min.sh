@@ -10,11 +10,13 @@ ssmdb2_db=SSMDB2
 #echo "Dump erstellt."
 
 echo "Dump wird aus SSMDB2-Datenbank erstellt..";
+echo "mysqldump -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql";
 mysqldump -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
 echo "Dump erstellt.";
-#echo "Dump wird lokal eingespielt..";
-#mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
-#echo "Dump eingespielt.";
+echo "Dump wird lokal eingespielt..";
+echo "mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql";
+mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
+echo "Dump eingespielt.";
 #echo "Dump wird auf Webserver eingespielt..";
 #mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql";
 #echo "Dump eingespielt.";
