@@ -2,7 +2,7 @@ echo "- `date -u` 1min.sh" >> /proc/1/fd/1
 
 ssmdb2_host=h2790537.stratoserver.net
 ssmdb2_user=ssmdb2
-ssmdb2_password=mc4hct
+ssmdb2_password=*2Aj72zx
 ssmdb2_db=SSMDB2
 ssmdb2_meyshot=MEYSHOT
 #echo "Dump wird aus SSMDB2-Datenbank erstellt.."
