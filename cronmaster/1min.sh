@@ -1,7 +1,7 @@
 echo "- `date -u` 1min.sh" >> /proc/1/fd/1
 
 ssmdb2_host=h2790537.stratoserver.net
-ssmdb2_user=ssmdb2
+ssmdb2_user=meyshot
 ssmdb2_password=*2Aj72zx
 ssmdb2_db=SSMDB2
 ssmdb2_meyshot=MEYSHOT
@@ -25,6 +25,6 @@ echo "Dump für SSMDB2 wird auf Webserver eingespielt..";
 echo "mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql";
 mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql
 echo "Dump für MEYSHOT wird auf Webserver eingespielt..";
-echo "mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/SSMDB2.sql";
+echo "mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/MEYSHOT.sql";
 mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/MEYSHOT.sql
 echo "Fertig.";
