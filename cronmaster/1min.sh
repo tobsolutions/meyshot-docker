@@ -4,6 +4,7 @@ ssmdb2_host=h2790537.stratoserver.net
 ssmdb2_user=ssmdb2
 ssmdb2_password=mc4hct
 ssmdb2_db=SSMDB2
+ssmdb2_meyshot=MEYSHOT
 #echo "Dump wird aus SSMDB2-Datenbank erstellt.."
 #echo "mysqldump -hsqldb -uroot -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql"
 #mysqldump -hsqldb -uroot -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
@@ -15,11 +16,10 @@ echo "Dump wird lokal eingespielt..";
 echo "mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql";
 mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
 echo "Setze lokales Uploaddatum..";
-echo "mysql --hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'";
+echo "mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'";
 mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
-#echo "Fertig.";
-#echo "Dump wird auf Webserver eingespielt..";
-#mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql";
-#echo "Setze Uploaddatum..";
-#mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -e "INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)"
+echo "Dump wird auf Webserver eingespielt..";
+mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql;
+echo "Setze Uploaddatum auf Webserver..";
+mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
 echo "Fertig.";
