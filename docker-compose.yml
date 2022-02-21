@@ -41,8 +41,6 @@ services:
       PMA_ARBITRARY: 1
       UPLOAD_LIMIT: 300M
     restart: always
-    depends_on:
-      - "sqldb"
   cronmaster:
     image: alpine:3.8
     volumes:
