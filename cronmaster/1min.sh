@@ -4,14 +4,14 @@ ssmdb2_host=h2790537.stratoserver.net
 ssmdb2_user=ssmdb2
 ssmdb2_password=mc4hct
 ssmdb2_db=SSMDB2
-echo "Dump wird aus SSMDB2-Datenbank erstellt.."
-echo "mysqldump -hsqldb -uroot -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql"
-mysqldump -hsqldb -uroot -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
-echo "Dump erstellt."
+#echo "Dump wird aus SSMDB2-Datenbank erstellt.."
+#echo "mysqldump -hsqldb -uroot -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql"
+#mysqldump -hsqldb -uroot -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
+#echo "Dump erstellt."
 
-#echo "Dump wird aus SSMDB2-Datenbank erstellt..";
-#mysqldump -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
-#echo "Dump erstellt.";
+echo "Dump wird aus SSMDB2-Datenbank erstellt..";
+mysqldump -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
+echo "Dump erstellt.";
 #echo "Dump wird lokal eingespielt..";
 #mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
 #echo "Dump eingespielt.";
