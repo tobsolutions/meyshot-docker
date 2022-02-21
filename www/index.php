@@ -64,7 +64,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Komponenten:</h6>
             <a class="collapse-item" href="#">Allgemein</a>
-            <a class="collapse-item" href="#">Visualisierung</a>
+            <a class="collapse-item" href="#">Visualisierung Test</a>
           </div>
         </div>
       </li>
