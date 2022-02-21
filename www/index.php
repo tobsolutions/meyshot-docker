@@ -73,25 +73,25 @@
       <hr class="sidebar-divider">
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.178.143:8088" target="_blank">
+        <a class="nav-link" href="http://192.168.178.222:8088" target="_blank">
           <i class="fas fa-database"></i>
           <span>phpMyAdmin</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.178.143:8090/?action=stream" target="_blank">
+        <a class="nav-link" href="http://192.168.178.222:8090/?action=stream" target="_blank">
           <i class="fas fa-database"></i>
           <span>stream0</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.178.143:9000" target="_blank">
+        <a class="nav-link" href="http://192.168.178.222:9000" target="_blank">
           <i class="fas fa-database"></i>
           <span>DockerGUI</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.178.143/vis" target="_blank">
+        <a class="nav-link" href="http://192.168.178.222/vis" target="_blank">
           <i class="fas fa-database"></i>
           <span>VIS</span></a>
       </li>
