@@ -28,7 +28,7 @@ services:
     volumes:
       - my-db:/var/lib/mysql
       - ./sqldb:/docker-entrypoint-initdb.d
-    command: ['mysqld','--default-time-zone=Europe/Berlin']
+    command: ['mysqld', '--collation-server=utf8mb4_unicode_ui', '--default-time-zone=Europe/Berlin']
   sqldb_myadmin:
     image: phpmyadmin
     ports:
