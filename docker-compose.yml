@@ -8,8 +8,6 @@ services:
     volumes:
      - ./www:/usr/local/apache2/htdocs:ro
      - ./www/my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
-     depends_on:
-      - "sqldb_myadmin"
   dockergui:
     restart: always
     image: uifd/ui-for-docker
