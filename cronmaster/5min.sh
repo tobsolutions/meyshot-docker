@@ -1,4 +1,4 @@
-echo "- `date -u` 5min.sh job" >> /proc/1/fd/1
+echo "- `date -u` 5min.sh job gestartet" >> /proc/1/fd/1
 
 ssmdb2_host=h2790537.stratoserver.net
 ssmdb2_user=meyshot
