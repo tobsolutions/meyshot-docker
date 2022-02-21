@@ -18,8 +18,13 @@ mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
 echo "Setze lokales Uploaddatum..";
 echo "mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'";
 mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
-echo "Dump wird auf Webserver eingespielt..";
-mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql;
-echo "Setze Uploaddatum auf Webserver..";
-mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
+echo "Dump wird aus MEYSHOT-Datenbank erstellt..";
+echo "mysqldump -hsqldb -uroot -pmc4hct MEYSHOT > /usr/local/bin/MEYSHOT.sql";
+mysqldump -hsqldb -uroot -pmc4hct MEYSHOT > /usr/local/bin/MEYSHOT.sql
+echo "Dump für SSMDB2 wird auf Webserver eingespielt..";
+echo "mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql";
+mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql
+echo "Dump für MEYSHOT wird auf Webserver eingespielt..";
+echo "mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/SSMDB2.sql";
+mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/MEYSHOT.sql
 echo "Fertig.";
