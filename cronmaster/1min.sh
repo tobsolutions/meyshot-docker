@@ -16,7 +16,7 @@ echo "Dump wird lokal eingespielt..";
 echo "mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql";
 mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
 echo "Setze lokales Uploaddatum..";
-echo "mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'";
+echo "mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO Upload (Uploaddatum) VALUES (CURRENT_TIMESTAMP)'";
 mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
 echo "Dump wird aus MEYSHOT-Datenbank erstellt..";
 echo "mysqldump -hsqldb -uroot -pmc4hct MEYSHOT > /usr/local/bin/MEYSHOT.sql";
