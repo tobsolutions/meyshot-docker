@@ -42,6 +42,7 @@ services:
       UPLOAD_LIMIT: 300M
     restart: always
   cronmaster:
+    restart: always
     image: alpine:3.8
     volumes:
       - ./cronmaster:/usr/local
