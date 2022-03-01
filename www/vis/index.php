@@ -59,11 +59,17 @@
         </div>
       </div>      
       <div class="col-sm-3">
-        <div class="row"> 
-          <h2>Gauschützenkönig 2022</h2> 
-          <p>pro Schütze 1 Schuss auf die Gaukönig-Scheibe</br>
-            Klassen: Jugend, LG, LP, Auflage</br>
-          <b> ! verlängert bis 08.04.2022 !</b></p>
+        <div class="row">
+          <div class="card">
+            <div class="card-header">
+              <h4>Gauschützenkönig 2022</h4> 
+            </div>
+            <div class="card-body">
+            <p>pro Schütze 1 Schuss auf die Gaukönig-Scheibe</br>
+              Klassen: Jugend, LG, LP, Auflage</br>
+              <b> ! verlängert bis 08.04.2022 !</b></p>
+            </div>
+          </div> 
         </div>
       </div>   
   </div>
