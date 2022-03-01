@@ -60,7 +60,11 @@
       </div>      
       <div class="col-sm-3">
         <div class="row">
-          <span>Hallo Welt!</span>   
+          <span>Hallo Welt!</span>  
+          <h2>Gauschützenkönig 2022</h2> 
+          <p>pro Schütze 1 Schuss auf die Gaukönig-Scheibe</br>
+            Klassen: Jugend, LG, LP, Auflage</br>
+          <b> ! verlängert bis 08.04.2022 !</b></p>
         </div>
       </div>   
   </div>
