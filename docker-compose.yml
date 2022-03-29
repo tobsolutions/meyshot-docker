@@ -6,8 +6,7 @@ services:
     ports:
       - '80:80'
     volumes:
-     - ./www:/usr/local/apache2/htdocs:ro
-     - ./www/my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+     - ./www:/var/www/html:ro
   dockergui:
     restart: always
     image: uifd/ui-for-docker
