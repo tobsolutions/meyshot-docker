@@ -17,20 +17,6 @@
 
 <body>
   <?php require_once('dbconnect.php'); ?>
-  <?php
-$host='sqldb';
-$user='root';
-$pass='mc4hct';
-
-$link_meyshot = mysqli_connect($host, $user, $pass, 'MEYSHOT');
-
-$conn = new mysqli($host, $user, $pass);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} else {
-    echo "Connected to MySQL server successfully!";
-}
-?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
