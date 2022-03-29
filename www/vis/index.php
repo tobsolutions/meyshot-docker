@@ -90,7 +90,7 @@
           $result = mysqli_query($link_meyshot, $sql);
           
           while ($row = mysqli_fetch_array($result)) {
-              echo $row[0];
+              echo $row[0] & "x";
           }
 
           mysqli_free_result($result);?>
