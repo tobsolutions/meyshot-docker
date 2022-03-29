@@ -79,6 +79,12 @@
               Es wird auf bunte Spaßscheiben geschossen und es warten viele bunte Ostereier!</p>
             </div>
           </div> 
+          <div class="card">
+            <div class="card-header">
+              <h4>Ostereierschießen 2022</h4> 
+            </div>
+            <div class="card-body">
+            
           <?php
           $sql = 'SELECT * FROM Infoticker';
           $result = mysqli_query($link_meyshot, $sql);
@@ -88,6 +94,9 @@
           }
 
           mysqli_free_result($result);?>
+
+            </div>
+          </div> 
         </div>
       </div>   
   </div>
