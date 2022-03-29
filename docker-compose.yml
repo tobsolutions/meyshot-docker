@@ -2,7 +2,7 @@ version: '3.3'
 services:
   www:
     restart: always
-    image: php:apache
+    image: pensiero/apache-php-mysql
     ports:
       - '80:80'
     volumes:
