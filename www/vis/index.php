@@ -79,6 +79,15 @@
               Es wird auf bunte Spaßscheiben geschossen und es warten viele bunte Ostereier!</p>
             </div>
           </div> 
+          <?php
+          $sql = 'SELECT * FROM Infoticker';
+          $result = mysqli_query($link_meyshot, $sql);
+          
+          while ($row = mysqli_fetch_array($result)) {
+              echo $row[0];
+          }
+
+          mysqli_free_result($result);?>
         </div>
       </div>   
   </div>
