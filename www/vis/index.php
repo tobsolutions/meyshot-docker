@@ -84,7 +84,7 @@
               <h4>Ostereierschießen 2022</h4> 
             </div>
             <div class="card-body">
-            X
+            X<?php echo 'Hello World'; ?>
           <?php
           echo "x";
           $sql = 'SELECT * FROM Infoticker';
