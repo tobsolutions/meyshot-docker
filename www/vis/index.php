@@ -70,6 +70,15 @@
               <b> ! verlängert bis 08.04.2022 !</b></p>
             </div>
           </div> 
+          <div class="card">
+            <div class="card-header">
+              <h4>Ostereierschießen 2022</h4> 
+            </div>
+            <div class="card-body">
+            <p>Termin: 10.04.2022 ab 13.30 Uhr</b></br>
+              Es wird auf bunte Spaßscheiben geschossen und es warten viele bunte Ostereier!</p>
+            </div>
+          </div> 
         </div>
       </div>   
   </div>
