@@ -1,0 +1,62 @@
+version: '3.3'
+services:
+  www:
+    restart: always
+    image: httpd:latest
+    ports:
+      - '80:80'
+    volumes:
+     - ./www:/usr/local/apache2/htdocs:ro
+     - ./www/my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+  dockergui:
+    restart: always
+    image: uifd/ui-for-docker
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '9000:9000'
+  sqldb:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'mc4hct'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+      - ./sqldb:/docker-entrypoint-initdb.d
+    command: ['mysqld', '--collation-server=utf8mb4_unicode_ci', '--default-time-zone=Europe/Berlin']
+  sqldb_myadmin:
+    image: phpmyadmin
+    ports:
+      - '8088:80'
+    links:
+      - sqldb
+    environment:
+      PMA_HOST: 'sqldb'
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+      UPLOAD_LIMIT: 300M
+    restart: always
+  cronmaster:
+    restart: always
+    image: alpine:3.8
+    volumes:
+      - ./cronmaster:/usr/local
+    entrypoint: /bin/sh
+    command: /usr/local/startup.sh
+  stream0:
+    restart: always
+    image: patsoffice/mjpg-streamer
+    devices:
+      - /dev/video0:/dev/video0
+    ports:
+      - 8090:8080
+    command: mjpg_streamer -i 'input_uvc.so -d /dev/video0 -r 1280x720 -f 1' -o 'output_http.so -w /usr/local/share/mjpg-streamer/www'
+
+# Names our volume
+volumes:
+  my-db:
