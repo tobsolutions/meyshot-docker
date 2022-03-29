@@ -86,6 +86,7 @@
             <div class="card-body">
             
           <?php
+          echo "x";
           $sql = 'SELECT * FROM Infoticker';
           $result = mysqli_query($link_meyshot, $sql);
           
