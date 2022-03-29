@@ -1,4 +1,3 @@
-<?php require_once('dbconnect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +16,7 @@
 </head>
 
 <body>
-
+  <?php require_once('dbconnect.php'); ?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
