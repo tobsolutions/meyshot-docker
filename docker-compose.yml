@@ -6,7 +6,7 @@ services:
     ports:
       - '80:80'
     volumes:
-     - ./www:/var/www/html:ro
+     - ./www:/var/www:ro
   dockergui:
     restart: always
     image: uifd/ui-for-docker
