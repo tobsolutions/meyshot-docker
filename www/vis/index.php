@@ -17,6 +17,27 @@
 
 <body>
   <?php require_once('dbconnect.php'); ?>
+
+  <?php
+//These are the defined authentication environment in the db service
+
+// The MySQL service named in the docker-compose.yml.
+$host = 'sqldb';
+
+// Database use name
+$user = 'root';
+
+//database user password
+$pass = 'mc4hct';
+
+// check the MySQL connection status
+$conn = new mysqli($host, $user, $pass);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "Connected to MySQL server successfully!";
+}
+?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
@@ -94,7 +115,8 @@
               echo $row[0] & "x";
           }
 
-          mysqli_free_result($result);?>
+          mysqli_free_result($result);
+          ?>
 
             </div>
           </div> 
