@@ -16,10 +16,7 @@
 </head>
 
 <body>
-  <?php require_once('dbconnect.php'); ?><?php
-  if($link_meyshot) {
-    die('failed to connect to the server: ' . mysqli_connect_error());
-}?>
+  <?php require('dbconnect.php'); ?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
