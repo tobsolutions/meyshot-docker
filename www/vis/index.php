@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <?php require('dbconnect.php'); ?>
+  <?php include('dbconnect.php'); ?>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
