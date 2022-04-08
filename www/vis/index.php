@@ -84,19 +84,17 @@
               <h4>Ostereierschießen 2022</h4> 
             </div>
             <div class="card-body">
-            X<?php echo 'Hello World'; ?>
-          <?php
-          echo "x";
-          $sql = 'SELECT * FROM Infoticker';
-          $result = mysqli_result($link_meyshot, $sql);
-          
-          while ($row = mysqli_fetch_array($result)) {
-              echo $row[0] & "x";
-          }
+              <?php
+              echo "x";
+              $sql = 'SELECT * FROM Infoticker';
+              $result = mysqli_result($link_meyshot, $sql);
+              
+              while ($row = mysqli_fetch_array($result)) {
+                  echo $row[0] & "x";
+              }
 
-          mysqli_free_result($result);
-          ?>
-
+              mysqli_free_result($result);
+              ?>
             </div>
           </div> 
         </div>
