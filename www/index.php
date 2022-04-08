@@ -134,7 +134,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600">
                       <?php
-                        include('../dbconnect.php');
+                        include('dbconnect.php');
                         $sql = 'SELECT aufsichten_name FROM aufsichten_log, aufsichten WHERE aufsichten_log.aufsichten_id=aufsichten.aufsichten_id ORDER BY `aufsichten_log_login` ASC LIMIT 1';
                         $result = mysqli_query($link_meyshot, $sql);
                         
