@@ -92,8 +92,8 @@
                 echo '<div class="card-header">';
                 echo '<h4>Ostereierschießen 2022</h4>';
                 echo $row['Titel'];
-                echo '</div>'
-                echo '<div class="card-body">'
+                echo '</div>';
+                echo '<div class="card-body">';
                 echo $row['Text'];
                 echo '</div>';
               }
