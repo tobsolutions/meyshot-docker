@@ -79,27 +79,27 @@
               Es wird auf bunte Spaßscheiben geschossen und es warten viele bunte Ostereier!</p>
             </div>
           </div> 
-          <div class="card">
-            <?php
-              $sql = 'SELECT * FROM Infoticker';
-              $result = mysqli_query($link_meyshot, $sql);
-              if ( ! $result )
-              {
-                die('Ungültige Abfrage: ' . mysqli_error());
-              }
-              
-              while ($row = mysqli_fetch_array($result)) {
-                echo '<div class="card-header">';
-                echo '<h4>' & $row['Titel'] & '</h4>';
-                echo '</div>';
-                echo '<div class="card-body">';
-                echo $row['Text'];
-                echo '</div>';
-              }
+          <?php
+            $sql = 'SELECT * FROM Infoticker';
+            $result = mysqli_query($link_meyshot, $sql);
+            if ( ! $result )
+            {
+              die('Ungültige Abfrage: ' . mysqli_error());
+            }
+            
+            while ($row = mysqli_fetch_array($result)) {
+              echo '<div class="card">';
+              echo '<div class="card-header">';
+              echo '<h4>' & $row['Titel'] & '</h4>';
+              echo '</div>';
+              echo '<div class="card-body">';
+              echo $row['Text'];
+              echo '</div>';
+              echo '</div>';
+            }
 
-              mysqli_free_result($result);
-            ?>
-          </div> 
+            mysqli_free_result($result);
+          ?>
         </div>
       </div>   
   </div>
