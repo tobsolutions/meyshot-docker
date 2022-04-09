@@ -89,7 +89,7 @@
                 $result = mysqli_query($link_meyshot, $sql);
                 
                 while ($row = mysqli_fetch_array($result)) {
-                    echo $row[0] & $row[1] & $row[2] & $row;
+                    echo $row['Titel'] & $row['Text'] & $row[2] & $row;
                 }
 
                 mysqli_free_result($result);
