@@ -90,8 +90,7 @@
               
               while ($row = mysqli_fetch_array($result)) {
                 echo '<div class="card-header">';
-                echo '<h4>Ostereierschießen 2022</h4>';
-                echo $row['Titel'];
+                echo '<h4>' & </h4>$row['Titel'] & '</h4>';
                 echo '</div>';
                 echo '<div class="card-body">';
                 echo $row['Text'];
