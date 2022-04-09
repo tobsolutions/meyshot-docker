@@ -61,7 +61,7 @@
       <div class="col-sm-3">
         <div class="row">
           <?php
-            $sql = 'SELECT * FROM Infoticker ORDER BY Startdatum ASC';
+            $sql = 'SELECT * FROM Infoticker WHERE Enddatum >= NOW() ORDER BY Startdatum ASC';
             $result = mysqli_query($link_meyshot, $sql);
             if ( ! $result )
             {
