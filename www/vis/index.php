@@ -60,25 +60,6 @@
       </div>      
       <div class="col-sm-3">
         <div class="row">
-          <div class="card">
-            <div class="card-header">
-              <h4>Gauschützenkönig 2022</h4> 
-            </div>
-            <div class="card-body">
-            <p>pro Schütze 1 Schuss auf die Gaukönig-Scheibe</br>
-              Klassen: Jugend, LG, LP, Auflagex</br>
-              <b> ! verlängert bis 08.04.2022 !</b></p>
-            </div>
-          </div> 
-          <div class="card">
-            <div class="card-header">
-              <h4>Ostereierschießen 2022</h4> 
-            </div>
-            <div class="card-body">
-            <p><b>Termin: 10.04.2022 ab 13.30 Uhr</b></br>
-              Es wird auf bunte Spaßscheiben geschossen und es warten viele bunte Ostereier!</p>
-            </div>
-          </div> 
           <?php
             $sql = 'SELECT * FROM Infoticker';
             $result = mysqli_query($link_meyshot, $sql);
@@ -88,7 +69,7 @@
             }
             
             while ($row = mysqli_fetch_array($result)) {
-              echo '<div class="card">';
+              echo '<div class="card" width="100%">';
               echo '<div class="card-header"><h4>';
               echo $row['Titel'];
               echo '</h4></div>';
