@@ -74,7 +74,7 @@
               echo $row['Titel'];
               echo '</h4></div>';
               echo '<div class="card-body">';
-              echo $row['Enddatum'] ' ' $row['Text'];
+              echo $row['Enddatum'] . ' ' . $row['Text'];
               echo '</div>';
               echo '</div>';
             }
