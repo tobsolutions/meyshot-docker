@@ -87,6 +87,10 @@
               <?php
                 $sql = 'SELECT * FROM Infoticker';
                 $result = mysqli_query($link_meyshot, $sql);
+                if ( ! $result )
+                {
+                  die('Ungültige Abfrage: ' . mysqli_error());
+                }
                 
                 while ($row = mysqli_fetch_array($result)) {
                     echo $row['Titel'];
