@@ -85,15 +85,14 @@
             </div>
             <div class="card-body">
               <?php
-              echo "x";
-              $sql = 'SELECT * FROM Infoticker';
-              $result = mysqli_query($link_meyshot, $sql);
-              
-              while ($row = mysqli_fetch_array($result)) {
-                  echo $row[0] & $row[1] & $row[2] & "x";
-              }
+                $sql = 'SELECT * FROM Infoticker';
+                $result = mysqli_query($link_meyshot, $sql);
+                
+                while ($row = mysqli_fetch_array($result)) {
+                    echo $row[0] & $row[1] & $row[2] & $row;
+                }
 
-              mysqli_free_result($result);
+                mysqli_free_result($result);
               ?>
             </div>
           </div> 
