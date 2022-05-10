@@ -60,6 +60,7 @@
       </div>      
       <div class="col-sm-3">
         <div class="row" id="infoticker">
+          Suche Informationen ..
         </div>
       </div>   
   </div>
