@@ -85,12 +85,12 @@
       </div>   
   </div>
 
+  <script src="js/jquery-1.10.2.min.js"></script>
+
   <script> setTimeout(function () {
         console.log("Refreshed"); 
       }, 1000);
   </script>
-
-  <script src="js/jquery-1.10.2.min.js"></script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
