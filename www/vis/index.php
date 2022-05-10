@@ -69,6 +69,7 @@
   <script src="js/jquery-3.4.1.js"></script>
   <script>
     $(document).ready(function() {
+        $( "#infoticker" ).load("infoticker.php");
         setInterval(function() {
             $( "#infoticker" ).load("infoticker.php");
         }, 10000);
