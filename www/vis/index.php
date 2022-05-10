@@ -91,7 +91,7 @@
     $(document).ready(function() {
         setInterval(function() {
             $( "#infoticker" ).load("infoticker.php");
-        }, 3000);
+        }, 10000);
       });
   </script>
 
