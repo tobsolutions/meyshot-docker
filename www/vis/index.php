@@ -58,7 +58,7 @@
           <img style="width: 100%; height: auto;" src="http://192.168.10.222:8090/?action=stream" />    
         </div>
       </div>      
-      <div class="col-sm-3">
+      <div class="col-sm-3 ml-1">
         <div class="row" id="infoticker">
           Suche Informationen ..
         </div>
