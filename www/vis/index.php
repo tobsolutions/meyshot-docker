@@ -96,8 +96,7 @@
   </script>
 
   <script>
-    $(document).ready(
-      function() {
+    $(document).ready(function() {
         setInterval(function() {
             console.log("Refreshed");
             $( "#infoticker" ).load(window.location.href + " #infoticker" );
