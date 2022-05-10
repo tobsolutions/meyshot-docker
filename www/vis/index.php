@@ -85,8 +85,8 @@
       </div>   
   </div>
 
+  <!-- JS -->
   <script src="js/jquery-3.4.1.js"></script>
-
   <script> setTimeout(function () {
       console.log("Refreshed1"); 
     }, 1000);
@@ -105,7 +105,7 @@
   </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <!--<script src="vendor/jquery/jquery.slim.min.js"></script>-->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
