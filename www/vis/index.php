@@ -53,12 +53,12 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-9 box">
+      <div class="col-sm-9">
         <div class="row">
           <img style="width: 100%; height: auto;" src="http://192.168.10.222:8090/?action=stream" />    
         </div>
       </div>      
-      <div class="col-sm-3 box">
+      <div class="col-sm-3">
         <div class="row" id="infoticker">
           Suche Informationen ..
         </div>
