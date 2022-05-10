@@ -99,7 +99,7 @@
     $(document).ready(function() {
         setInterval(function() {
             console.log("Refreshed");
-            $( "#infoticker" ).load(window.location.href + " #infoticker" );
+            $( "#infoticker" ).load("infoticker.php");
         }, 3000);
       });
   </script>
