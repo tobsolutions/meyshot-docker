@@ -87,18 +87,9 @@
 
   <!-- JS -->
   <script src="js/jquery-3.4.1.js"></script>
-  <script> setTimeout(function () {
-      console.log("Refreshed1"); 
-    }, 1000);
-    setTimeout(function () {
-      console.log("Refreshed2"); 
-    }, 3000);
-  </script>
-
   <script>
     $(document).ready(function() {
         setInterval(function() {
-            console.log("Refreshed");
             $( "#infoticker" ).load("infoticker.php");
         }, 3000);
       });
