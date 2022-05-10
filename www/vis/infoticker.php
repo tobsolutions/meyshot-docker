@@ -10,7 +10,7 @@ if ( ! $result )
 while ($row = mysqli_fetch_array($result)) {
     echo '<div class="card" width="100%">';
     echo '<div class="card-header">';
-    echo '<h6>' . $row['Titel'] . '</h6>';
+    echo '<h5>' . $row['Titel'] . '</h5>';
     echo '</div>';
     echo '<div class="card-body">';
     echo $row['Text'];
