@@ -59,7 +59,7 @@
         </div>
       </div>      
       <div class="col-sm-3">
-        <div class="row">
+        <div class="row" id="infoticker">
           <?php
             $sql = 'SELECT * FROM Infoticker WHERE Enddatum >= NOW() AND Startdatum <= NOW() ORDER BY Startdatum ASC';
             $result = mysqli_query($link_meyshot, $sql);
@@ -100,6 +100,7 @@
       function() {
         setInterval(function() {
             console.log("Refreshed");
+            $( "#infoticker" ).load(window.location.href + " #infoticker" );
         }, 3000);
       });
   </script>
