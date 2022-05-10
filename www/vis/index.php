@@ -89,8 +89,10 @@
 
   <script> setTimeout(function () {
         console.log("Refreshed"); 
-        setTimeout();
       }, 1000);
+      setTimeout(function () {
+        console.log("Refreshed2"); 
+      }, 3000);
   </script>
 
   <!-- Bootstrap core JavaScript -->
