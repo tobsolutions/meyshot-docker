@@ -4591,7 +4591,7 @@ input[type="button"].btn-block {
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: 0.5rem;
 }
 
 .card-title {
@@ -4616,7 +4616,7 @@ input[type="button"].btn-block {
 }
 
 .card-header {
-  padding: 0.25rem 0.25rem;
+  padding: 0.25rem 0.75rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
