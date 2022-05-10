@@ -88,11 +88,20 @@
   <script src="js/jquery-1.10.2.min.js"></script>
 
   <script> setTimeout(function () {
-        console.log("Refreshed"); 
-      }, 1000);
-      setTimeout(function () {
-        console.log("Refreshed2"); 
-      }, 3000);
+      console.log("Refreshed1"); 
+    }, 1000);
+    setTimeout(function () {
+      console.log("Refreshed2"); 
+    }, 3000);
+  </script>
+
+  <script>
+    $(document).ready(
+      function() {
+        setInterval(function() {
+            console.log("Refreshed");
+        }, 3000);
+      });
   </script>
 
   <!-- Bootstrap core JavaScript -->
