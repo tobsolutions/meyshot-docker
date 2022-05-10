@@ -89,6 +89,7 @@
 
   <script> setTimeout(function () {
         console.log("Refreshed"); 
+        setTimeout();
       }, 1000);
   </script>
 
