@@ -35,4 +35,16 @@ mkdir -p html
 cd html
 echo "- `date -u` Daten von SMB-Freigabe 'html' wird heruntergeladen";
 smbclient //192.168.10.200/html -N -c 'cd ./html; prompt; mget *'
+
+
+ftp -n h2790537.stratoserver.net <<EOF
+quote USER svtieba
+quote PASS IkOowINN82M%6e7af
+cd html
+mput *
+quit
+exit;
+EOF
+
+
 cd ..
