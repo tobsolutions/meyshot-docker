@@ -42,7 +42,7 @@ quote USER svtieba
 quote PASS IkOowINN82M%6e7af
 prompt
 cd dorfcup/html
-lcd html
+lcd ./html
 mput *
 quit
 exit;
