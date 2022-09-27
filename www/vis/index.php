@@ -59,36 +59,25 @@
         </div>
       </div>      
       <div class="col-sm-3">
-        <div class="row">
-          <?php
-            $sql = 'SELECT * FROM Infoticker WHERE Enddatum >= NOW() AND Startdatum <= NOW() ORDER BY Startdatum ASC';
-            $result = mysqli_query($link_meyshot, $sql);
-            if ( ! $result )
-            {
-              die('Ungültige Abfrage: ' . mysqli_error());
-            }
-            
-            while ($row = mysqli_fetch_array($result)) {
-              echo '<div class="card" width="100%">';
-              echo '<div class="card-header">';
-              echo '<h4>' . $row['Titel'] . '</h4>';
-              echo '</div>';
-              echo '<div class="card-body">';
-              echo $row['Text'];
-              echo '</div>';
-              echo '</div>';
-            }
-
-            mysqli_free_result($result);
-          ?>
+        <div class="row" id="infoticker">
+          Suche Informationen ..
         </div>
       </div>   
   </div>
 
-  <script src="js/jquery-1.10.2.min.js"></script>
+  <!-- JS -->
+  <script src="js/jquery-3.4.1.js"></script>
+  <script>
+    $(document).ready(function() {
+        $( "#infoticker" ).load("infoticker.php");
+        setInterval(function() {
+            $( "#infoticker" ).load("infoticker.php");
+        }, 10000);
+      });
+  </script>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <!--<script src="vendor/jquery/jquery.slim.min.js"></script>-->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
