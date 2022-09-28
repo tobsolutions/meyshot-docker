@@ -30,23 +30,14 @@ echo "- `date -u` mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2
 mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/MEYSHOT.sql
 echo "- `date -u` Fertig.";
 
+#SMB FTP Upload
 echo "- `date -u` ### SMB FTP Upload ###";
 mkdir -p html
 cd html
-echo "- `date -u` Daten von SMB-Freigabe 'html' wird heruntergeladen";
+echo "- `date -u` Daten von SMB-Freigabe 'html' werden heruntergeladen";
 smbclient //192.168.10.200/html -N -c 'cd ./html; prompt; mget *'
-
-
-ftp -n h2790537.stratoserver.net <<EOF
-quote USER svtieba
-quote PASS IkOowINN82M%6e7af
-prompt
-cd dorfcup/html
-lcd ./html
-mput *
-quit
-exit;
-EOF
-
-
 cd ..
+
+echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
+ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup/html html
+
