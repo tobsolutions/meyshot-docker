@@ -39,5 +39,5 @@ smbclient //192.168.10.200/html -N -c 'cd ./html; prompt; mget *'
 cd ..
 
 echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
-ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup/html html
+ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup html
 
