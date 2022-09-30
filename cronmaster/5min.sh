@@ -33,7 +33,8 @@ echo "- `date -u` Fertig.";
 #SMB FTP Upload
 echo "- `date -u` ### SMB FTP Upload ###";
 echo "- `date -u` Daten von SMB-Freigabe 'html' werden heruntergeladen";
-smbclient //192.168.10.200/html -N -c 'cd /usr/local/bin/html; prompt; mget *'
+cd /usr/local/bin/html;
+smbclient //192.168.10.200/html -N -c 'prompt; mget *'
 cd ..
 #cd ./html; 
 echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
