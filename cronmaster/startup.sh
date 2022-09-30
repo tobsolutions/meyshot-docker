@@ -19,8 +19,17 @@ apk update
 echo "- `date -u` apk add mysql-client"
 apk add mysql-client
 
-echo "- `date -u` mkdir /usr/local/bin"
-mkdir /usr/local/bin
+echo "- `date -u` apk add samba-client"
+apk add samba-client
+
+echo "- `date -u` apk add ncftp"
+apk add ncftp
+
+echo "- `date -u` mkdir -p /usr/local/bin"
+mkdir -p /usr/local/bin
+
+echo "- `date -u` mkdir -p /usr/local/bin/html"
+mkdir -p /usr/local/bin/html
 
 echo "- `date -u` crond -f"
 crond -f
