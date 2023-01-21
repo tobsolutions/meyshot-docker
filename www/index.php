@@ -15,7 +15,7 @@
     </div>
     <div class="card-body">
         <p>Hallo Welt! Dies ist die MeyShot-Visualisierungs-Zentrale - kurz VisZ!</p>
-        <p>Hier folgt mehr..</p>
+        <p>Hier folgt mehr...</p>
     </div>
   </div>
 
