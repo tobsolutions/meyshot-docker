@@ -30,13 +30,12 @@
                     echo 'class="active"';
                 }
                 echo '>';
-                echo '<td>' . $row['Titel'] . '</td>';
-                echo '<td>' . substr($row['Text'],0,100) . '</td>';
+                echo '<td>' . strip_tags($row['Titel']) . '</td>';
+                echo '<td>' . strip_tags(substr($row['Text'],0,100)) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Startdatum'])) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Enddatum'])) . '</td>';
                 echo '<td>' . $row['Ersteller'] . '</td>';
                 echo '</tr>';
-                echo time() . " " . strtotime($row['Startdatum']) . " " . strtotime($row['Enddatum']);
             }
 
             mysqli_free_result($result);
