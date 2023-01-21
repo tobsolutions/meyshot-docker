@@ -30,7 +30,7 @@
                     echo 'class="active"';
                 }
                 echo '>';
-                echo '<td>' . strip_tags($row['Titel']) . '</td>';
+                echo '<td>' . strip_tags(substr($row['Titel'],0,50)) . '</td>';
                 echo '<td>' . strip_tags(substr($row['Text'],0,100)) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Startdatum'])) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Enddatum'])) . '</td>';
