@@ -17,7 +17,7 @@
         </tr>
         <?php
             require('dbconnect.php');
-            $sql = 'SELECT * FROM Infoticker WHERE Enddatum >= NOW() ORDER BY Startdatum ASC';
+            $sql = 'SELECT * FROM Infoticker WHERE Enddatum <= NOW() ORDER BY Startdatum ASC';
             $result = mysqli_query($link_meyshot_server, $sql);
             if ( ! $result )
             {
@@ -41,11 +41,6 @@
             mysqli_free_result($result);
         ?>
     </table>
-
-  <div class="card shadow mb-4">
-    <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Hallo Welt!</h6>
-    </div>
     
   </div>
 
