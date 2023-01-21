@@ -46,6 +46,12 @@
           <span>Dashboard</span></a>
       </li>
 
+      <li class="nav-item active">
+        <a class="nav-link" href="infoticker.php">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Infoticker</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
