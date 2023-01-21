@@ -8,13 +8,13 @@
   </div>
 
     <table class="table table-striped">
-        <th>
-            <td>Titel</td>
-            <td>Text</td>
-            <td>Startdatum</td>
-            <td>Enddatum</td>
-            <td>Ersteller</td>
-        </th>
+        <tr>
+            <th>Titel</th>
+            <th>Text</th>
+            <th>Startdatum</th>
+            <th>Enddatum</th>
+            <th>Ersteller</th>
+        </tr>
         <?php
             require('dbconnect.php');
             $sql = 'SELECT * FROM Infoticker ORDER BY Startdatum ASC';
