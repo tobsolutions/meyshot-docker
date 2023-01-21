@@ -15,6 +15,27 @@
             <td>Enddatum</td>
             <td>Ersteller</td>
         </th>
+        <?php
+            require('dbconnect.php');
+            $sql = 'SELECT * FROM Infoticker ORDER BY Startdatum ASC';
+            $result = mysqli_query($link_meyshot, $sql);
+            if ( ! $result )
+            {
+                die('Ungültige Abfrage: ' . mysqli_error());
+            }
+
+            while ($row = mysqli_fetch_array($result)) {
+                echo '<tr>';
+                echo '<td>' . $row['Titel'] . '</td>';
+                echo '<td>' . $row['Text'] . '</td>';
+                echo '<td>' . $row['Startdatum'] . '</td>';
+                echo '<td>' . $row['Enddatum'] . '</td>';
+                echo '<td>' . $row['Ersteller'] . '</td>';
+                echo '</tr>';
+            }
+
+            mysqli_free_result($result);
+        ?>
     </table>
 
   <div class="card shadow mb-4">
