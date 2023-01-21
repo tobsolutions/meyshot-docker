@@ -26,7 +26,7 @@
 
             while ($row = mysqli_fetch_array($result)) {
                 echo '<tr ';
-                if(time()>strtotime($row['Startdatum']) && time()<strtotime($row['Enddatum'])) {
+                if(time()>strtotime($row['Startdatum']) and time()<strtotime($row['Enddatum'])) {
                     echo 'class="active"';
                 }
                 echo '>';
