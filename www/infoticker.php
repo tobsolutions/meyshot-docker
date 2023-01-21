@@ -18,7 +18,7 @@
         <?php
             require('dbconnect.php');
             $sql = 'SELECT * FROM Infoticker ORDER BY Startdatum ASC';
-            $result = mysqli_query($link_meyshot, $sql);
+            $result = mysqli_query($link_meyshot_server, $sql);
             if ( ! $result )
             {
                 die('Ungültige Abfrage: ' . mysqli_error());
