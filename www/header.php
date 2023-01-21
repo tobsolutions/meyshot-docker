@@ -48,7 +48,7 @@
 
       <li class="nav-item active">
         <a class="nav-link" href="infoticker.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fas fa-fw fa-info"></i>
           <span>Infoticker</span></a>
       </li>
 
@@ -64,46 +64,19 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Einstellungen</span>
+          <span>Entwickler-Seiten</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Komponenten:</h6>
-            <a class="collapse-item" href="#">Allgemein</a>
-            <a class="collapse-item" href="#">Visualisierung Test</a>
+            <a class="collapse-item" href="http://192.168.10.222:8088" target="_blank">phpMyAdmin</a>
+            <a class="collapse-item" href="http://192.168.10.222:8090/?action=stream" target="_blank">stream0</a>
+            <a class="collapse-item" href="http://192.168.10.222:9000" target="_blank">DockerGUI</a>
+            <a class="collapse-item" href="http://192.168.10.222/vis" target="_blank">VIS</a>
+            
           </div>
         </div>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
-      <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.10.222:8088" target="_blank">
-          <i class="fas fa-database"></i>
-          <span>phpMyAdmin</span></a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.10.222:8090/?action=stream" target="_blank">
-          <i class="fas fa-database"></i>
-          <span>stream0</span></a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.10.222:9000" target="_blank">
-          <i class="fas fa-database"></i>
-          <span>DockerGUI</span></a>
-      </li>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="http://192.168.10.222/vis" target="_blank">
-          <i class="fas fa-database"></i>
-          <span>VIS</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
