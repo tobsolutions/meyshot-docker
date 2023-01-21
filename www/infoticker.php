@@ -17,7 +17,7 @@
         </tr>
         <?php
             require('dbconnect.php');
-            $sql = 'SELECT * FROM Infoticker WHERE Startdatum <= NOW() ORDER BY Startdatum ASC';
+            $sql = 'SELECT * FROM Infoticker WHERE Enddatum <= NOW() ORDER BY Startdatum ASC';
             $result = mysqli_query($link_meyshot_server, $sql);
             if ( ! $result )
             {
