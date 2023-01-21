@@ -29,7 +29,7 @@
                 echo '<td>' . $row['Titel'] . '</td>';
                 echo '<td>' . substr($row['Text'],0,100) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Startdatum'])) . '</td>';
-                echo '<td>' . date_format($row['Enddatum'], "d.m.Y H:i:s") . '</td>';
+                echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Enddatum'])) . '</td>';
                 echo '<td>' . $row['Ersteller'] . '</td>';
                 echo '</tr>';
             }
