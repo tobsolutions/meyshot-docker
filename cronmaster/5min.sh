@@ -16,18 +16,19 @@ mysqldump -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
 echo "- `date -u` Dump wird lokal eingespielt..";
 echo "- `date -u` mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql";
 mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
-echo "- `date -u` Setze lokales Uploaddatum..";
-echo "- `date -u` mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO 'Upload' ('Uploaddatum') VALUES (CURRENT_TIMESTAMP)'";
-mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
-echo "- `date -u` Dump wird aus MEYSHOT-Datenbank erstellt..";
-echo "- `date -u` mysqldump -hsqldb -uroot -pmc4hct MEYSHOT > /usr/local/bin/MEYSHOT.sql";
-mysqldump -hsqldb -uroot -pmc4hct MEYSHOT > /usr/local/bin/MEYSHOT.sql
 echo "- `date -u` Dump für SSMDB2 wird auf Webserver eingespielt..";
 echo "- `date -u` mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql";
 mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql
-echo "- `date -u` Dump für MEYSHOT wird auf Webserver eingespielt..";
-echo "- `date -u` mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/MEYSHOT.sql";
-mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f < /usr/local/bin/MEYSHOT.sql
+
+echo "- `date -u` Setze Uploaddatum auf Webserver..";
+echo "- `date -u` mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO Upload (Uploaddatum) VALUES (CURRENT_TIMESTAMP)'";
+mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
+echo "- `date -u` Dump wird vom Webserver aus MEYSHOT-Datenbank erstellt..";
+echo "- `date -u` mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f > /usr/local/bin/MEYSHOT.sql";
+mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f > /usr/local/bin/MEYSHOT.sql
+echo "- `date -u` Dump für MEYSHOT wird lokal eingespielt..";
+echo "- `date -u` mysqldump -hsqldb -uroot -pmc4hct MEYSHOT < /usr/local/bin/MEYSHOT.sql";
+mysqldump -hsqldb -uroot -pmc4hct MEYSHOT < /usr/local/bin/MEYSHOT.sql
 echo "- `date -u` Fertig.";
 
 #SMB FTP Upload
@@ -35,8 +36,15 @@ echo "- `date -u` ### SMB FTP Upload ###";
 echo "- `date -u` Daten von SMB-Freigabe 'html' werden heruntergeladen";
 cd /usr/local/bin/html;
 smbclient //192.168.10.200/html -N -c 'prompt; mget *'
+cd /usr/local/bin/pdf;
+smbclient //192.168.10.200/pdf -N -c 'prompt; mget *'
 cd ..
 #cd ./html; 
-echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
+echo "- `date -u` Daten werden auf FTP-Server für DorfCup hochgeladen";
 ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup /usr/local/bin/html
+
+echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
+ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /meytonsmb /usr/local/bin/html
+ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /meytonsmb /usr/local/bin/pdf
+
 
