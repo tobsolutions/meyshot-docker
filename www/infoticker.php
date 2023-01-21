@@ -25,7 +25,11 @@
             }
 
             while ($row = mysqli_fetch_array($result)) {
-                echo '<tr>';
+                echo '<tr ';
+                if(time()>strtotime($row['Startdatum']) && time()<strtotime($row['Enddatum'])) {
+                    echo 'class="active"';
+                }
+                echo '>';
                 echo '<td>' . $row['Titel'] . '</td>';
                 echo '<td>' . substr($row['Text'],0,100) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Startdatum'])) . '</td>';
