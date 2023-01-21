@@ -17,7 +17,7 @@
         </tr>
         <?php
             require('dbconnect.php');
-            $sql = 'SELECT * FROM Infoticker WHERE Enddatum <= NOW() ORDER BY Startdatum ASC';
+            $sql = 'SELECT * FROM Infoticker WHERE Enddatum >= NOW() ORDER BY Startdatum ASC';
             $result = mysqli_query($link_meyshot_server, $sql);
             if ( ! $result )
             {
@@ -30,7 +30,7 @@
                     echo 'class="active"';
                 }
                 echo '>';
-                echo '<td>' . strip_tags(substr($row['Titel'],0,30)) . '</td>';
+                echo '<td>' . strip_tags(substr($row['Titel'],0,50)) . '</td>';
                 echo '<td>' . strip_tags(substr($row['Text'],0,100)) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Startdatum'])) . '</td>';
                 echo '<td>' . date("d.m.Y H:i:s",strtotime($row['Enddatum'])) . '</td>';
