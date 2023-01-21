@@ -12,15 +12,10 @@
     <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary">Hallo Welt!</h6>
     </div>
-    <table class="table table-striped">
-      <th>
-        <td>Titel</td>
-        <td>Text</td>
-        <td>Startdatum</td>
-        <td>Enddatum</td>
-        <td>Ersteller</td>
-      </tr>
-    </table>
+    <div class="card-body">
+        <p>Hallo Welt! Dies ist die MeyShot-Visualisierungs-Zentrale - kurz VisZ!</p>
+        <p>Hier folgt mehr...</p>
+    </div>
   </div>
 
 </div>
