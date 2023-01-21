@@ -36,15 +36,17 @@ echo "- `date -u` ### SMB FTP Upload ###";
 echo "- `date -u` Daten von SMB-Freigabe 'html' werden heruntergeladen";
 cd /usr/local/bin/html;
 smbclient //192.168.10.200/html -N -c 'prompt; mget *'
-cd /usr/local/bin/pdf;
-smbclient //192.168.10.200/pdf -N -c 'prompt; mget *'
+cd /usr/local/bin/ergebnis/PDF;
+smbclient //192.168.10.200/ergebnis/PDF -N -c 'prompt; mget *'
+cd /usr/local/bin/ergebnis/HTML;
+smbclient //192.168.10.200/ergebnis/HTML -N -c 'prompt; mget *'
 cd ..
 #cd ./html; 
 echo "- `date -u` Daten werden auf FTP-Server für DorfCup hochgeladen";
 ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup /usr/local/bin/html
 
 echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
-ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /meytonsmb /usr/local/bin/html
-ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /meytonsmb /usr/local/bin/pdf
+ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /meytonsmb /usr/local/bin/ergebnis/PDF
+ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /meytonsmb /usr/local/bin/ergebnis/HTML
 
 

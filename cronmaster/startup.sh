@@ -31,8 +31,11 @@ mkdir -p /usr/local/bin
 echo "- `date -u` mkdir -p /usr/local/bin/html"
 mkdir -p /usr/local/bin/html
 
-echo "- `date -u` mkdir -p /usr/local/bin/pdf"
-mkdir -p /usr/local/bin/pdf
+echo "- `date -u` mkdir -p /usr/local/bin/ergebnis/PDF"
+mkdir -p /usr/local/bin/ergebnis/PDF
+
+echo "- `date -u` mkdir -p /usr/local/bin/ergebnis/HTML"
+mkdir -p /usr/local/bin/ergebnis/HTML
 
 echo "- `date -u` crond -f"
 crond -f
