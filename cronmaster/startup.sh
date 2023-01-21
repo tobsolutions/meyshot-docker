@@ -31,5 +31,8 @@ mkdir -p /usr/local/bin
 echo "- `date -u` mkdir -p /usr/local/bin/html"
 mkdir -p /usr/local/bin/html
 
+echo "- `date -u` mkdir -p /usr/local/bin/pdf"
+mkdir -p /usr/local/bin/pdf
+
 echo "- `date -u` crond -f"
 crond -f
