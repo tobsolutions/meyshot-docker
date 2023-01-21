@@ -24,11 +24,11 @@ echo "- `date -u` Setze Uploaddatum auf Webserver..";
 echo "- `date -u` mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO Upload (Uploaddatum) VALUES (CURRENT_TIMESTAMP)'";
 mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
 echo "- `date -u` Dump wird vom Webserver aus MEYSHOT-Datenbank erstellt..";
-echo "- `date -u` mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -f > /usr/local/bin/MEYSHOT.sql";
-mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot > /usr/local/bin/MEYSHOT.sql
+echo "- `date -u` mysqldump -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot > /usr/local/bin/MEYSHOT.sql";
+mysqldump -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot > /usr/local/bin/MEYSHOT.sql
 echo "- `date -u` Dump für MEYSHOT wird lokal eingespielt..";
-echo "- `date -u` mysqldump -hsqldb -uroot -pmc4hct MEYSHOT < /usr/local/bin/MEYSHOT.sql";
-mysqldump -hsqldb -uroot -pmc4hct MEYSHOT -f < /usr/local/bin/MEYSHOT.sql
+echo "- `date -u` mysql -hsqldb -uroot -pmc4hct MEYSHOT -f < /usr/local/bin/MEYSHOT.sql";
+mysql -hsqldb -uroot -pmc4hct MEYSHOT -f < /usr/local/bin/MEYSHOT.sql
 echo "- `date -u` Fertig.";
 
 #SMB FTP Upload
