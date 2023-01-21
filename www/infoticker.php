@@ -27,7 +27,7 @@
             while ($row = mysqli_fetch_array($result)) {
                 echo '<tr>';
                 echo '<td>' . $row['Titel'] . '</td>';
-                echo '<td>' . substr($row['Text'],0,20) . '</td>';
+                echo '<td>' . substr($row['Text'],0,100) . '</td>';
                 echo '<td>' . $row['Startdatum'] . '</td>';
                 echo '<td>' . $row['Enddatum'] . '</td>';
                 echo '<td>' . $row['Ersteller'] . '</td>';
