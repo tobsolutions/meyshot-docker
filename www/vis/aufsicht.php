@@ -4,11 +4,7 @@ $sql = 'SELECT `User`.`Name` FROM `Aufsichten`,`User` WHERE `User`.ID=Aufsichten
 $result = mysqli_query($link_meyshot, $sql);
 
 while ($row = mysqli_fetch_array($result)) {
-    if($row[0] == ""){
-        echo "keine Aufsicht angemeldet - siehe Aufsichtenplan";
-    } else {
-        echo $row[0];
-    }
+    echo $row[0];
 }
 echo "keine Aufsicht angemeldet - siehe Aufsichtenplan";
 
