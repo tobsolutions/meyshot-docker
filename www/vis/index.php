@@ -20,7 +20,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <span class='nav-item'>aktuelle Aufsicht: </span><span id="aufsicht"></span>
+      <span class='nav-item'>aktuelle Aufsicht: <span id="aufsicht"></span></span>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
