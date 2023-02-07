@@ -20,19 +20,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <span class='nav-item'>aktuelle Aufsicht: 
-      <?php
-        include('dbconnect.php');
-        $sql = 'SELECT `User`.`Name` FROM `Aufsichten`,`User` WHERE `User`.ID=Aufsichten.User AND `Ende` IS NULL';
-        $result = mysqli_query($link_meyshot, $sql);
-        
-        while ($row = mysqli_fetch_array($result)) {
-            echo $row[0];
-        }
-
-        mysqli_free_result($result);
-      ?>
-      </span>
+      <span class='nav-item'>aktuelle Aufsicht: </span><span id="aufsicht"></span>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -62,11 +50,16 @@
   <script src="js/jquery-3.4.1.js"></script>
   <script>
     $(document).ready(function() {
-        $( "#infoticker" ).load("infoticker.php");
-        setInterval(function() {
-            $( "#infoticker" ).load("infoticker.php");
-        }, 10000);
-      });
+      refresh();
+      setInterval(function() {
+        refresh();
+      }, 10000);
+    });
+
+    function refresh() {
+      $("#infoticker").load("infoticker.php");
+      $("#aufsicht").load("aufsicht.php");
+    }
   </script>
 
   <!-- Bootstrap core JavaScript -->
