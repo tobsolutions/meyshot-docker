@@ -10,6 +10,7 @@ while ($row = mysqli_fetch_array($result)) {
         echo $row[0];
     }
 }
+echo "keine Aufsicht angemeldet - siehe Aufsichtenplan";
 
 mysqli_free_result($result);
 ?>
