@@ -20,7 +20,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <span class='nav-item'>aktuelle Aufsicht: siehe Aufsichtenplan
+      <span class='nav-item'>aktuelle Aufsicht: 
       <?php
         include('dbconnect.php');
         $sql = 'SELECT `User`.`Name` FROM `Aufsichten`,`User` WHERE `User`.ID=Aufsichten.User AND `Ende` IS NULL';
