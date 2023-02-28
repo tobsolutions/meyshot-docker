@@ -111,7 +111,7 @@
         <span class="text-muted">Place sticky footer content here.</span>
         <div class="row">
           <class class="col-2">
-            <img src="logo.png" style="height:20px">
+            <img src="logo.png" style="height:50px">
           </class>
         </div>
       </div>
