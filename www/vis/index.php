@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
-    <meta charset="utf-16">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MeyShot VIS</title>
 
@@ -103,17 +103,7 @@
           <div class="col-3" id="infoticker">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Jahreshauptversammlung</h5>
-                <p class="card-text">mit Königsproklamation und Preisverteilung Rauchfleischschießen<br>
-                  Termin: 04.03.2022 19:30 Uhr
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Jahreshauptversammlung</h5>
-                <p class="card-text">mit Königsproklamation und Preisverteilung Rauchfleischschießen<br>
-                  Termin: 04.03.2022 19:30 Uhr
+                <p class="card-text">Suche Informationen ..
                 </p>
               </div>
             </div>
