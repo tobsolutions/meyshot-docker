@@ -82,10 +82,7 @@
     <main class="flex-shrink-0">
       <div class="container-fluid">
         <div class="row" id="header-row">
-          <class class="col-2">
-            <img src="logo.png" style="heigth:20px">
-          </class>
-          <div class="col-6">
+          <div class="col-6 offset-2">
             <span>aktuelle Aufsicht: <span id="aufsicht"></span></span>
           </div>
           <div class="col-2">
@@ -112,6 +109,11 @@
     <footer class="footer mt-auto py-3 bg-light">
       <div class="container-fluid">
         <span class="text-muted">Place sticky footer content here.</span>
+        <div class="row">
+          <class class="col-2">
+            <img src="logo.png" style="height:20px">
+          </class>
+        </div>
       </div>
     </footer>
 
