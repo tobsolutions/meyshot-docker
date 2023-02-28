@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MeyShot VIS</title>
-
-    <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer/">-->
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-
       body {
         --bg-color-header: #e84a52;
         --color-header: #fff;
@@ -84,11 +81,11 @@
     <!-- Begin page content -->
     <main class="flex-shrink-0">
       <div class="container-fluid">
-        <!--<h1 class="mt-5">Sticky footer</h1>
-        <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
-        <p>Use <a href="../examples/sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.</p>-->
         <div class="row" id="header-row">
-          <div class="col-6 offset-2">
+          <class class="col-2">
+            <img src="logo.png">
+          </class>
+          <div class="col-6">
             <span>aktuelle Aufsicht: <span id="aufsicht"></span></span>
           </div>
           <div class="col-2">
