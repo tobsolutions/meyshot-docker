@@ -112,7 +112,17 @@
                 
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600">
-                      php-Lücke
+                    <?php
+                      require('dbconnect.php');
+                      $sql = 'SELECT `User`.`Name` FROM `Aufsichten`,`User` WHERE `User`.ID=Aufsichten.User AND `Ende` IS NULL';
+                      $result = mysqli_query($link_meyshot, $sql);
+
+                      while ($row = mysqli_fetch_array($result)) {
+                          echo $row[0];
+                      }
+
+                      mysqli_free_result($result);
+                    ?>
                     </span>
                 </a>
               <!-- Dropdown - User Information -->
