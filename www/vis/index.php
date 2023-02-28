@@ -103,7 +103,7 @@
             <!--<img style="width: 100%; height: auto;" src="http://192.168.10.222:8090/?action=stream" />-->    
             <img style="width: 100%; height: auto;" src="stream.jpg" />
           </div>
-          <div class="col-3">
+          <div class="col-3" id="infoticker">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Jahreshauptversammlung</h5>
@@ -142,8 +142,8 @@
       });
   
       function refresh() {
-          //$("#infoticker").load("infoticker.php");
-          //$("#aufsicht").load("aufsicht.php");
+          $("#infoticker").load("infoticker.php");
+          $("#aufsicht").load("aufsicht.php");
       }
       </script>
   </body>
