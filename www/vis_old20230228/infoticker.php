@@ -8,12 +8,12 @@ if ( ! $result )
 }
 
 while ($row = mysqli_fetch_array($result)) {
-    echo '<div class="card">';
+    echo '<div class="card" width="100%">';
+    echo '<div class="card-header">';
+    echo '<h5>' . $row['Titel'] . '</h5>';
+    echo '</div>';
     echo '<div class="card-body">';
-    echo '<h5 class="card-title">' . $row['Titel'] . '</h5>';
-    echo '<p class="card-text">';
     echo $row['Text'];
-    echo '</p>';
     echo '</div>';
     echo '</div>';
 }
