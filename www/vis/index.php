@@ -100,8 +100,8 @@
         </div>
         <div class="row" id="content">
           <div class="col-9">
-            <!--<img style="width: 100%; height: auto;" src="http://192.168.10.222:8090/?action=stream" />-->    
-            <img style="width: 100%; height: auto;" src="stream.jpg" />
+            <img style="width: 100%; height: auto;" src="http://192.168.10.222:8090/?action=stream" />
+            <!--<img style="width: 100%; height: auto;" src="stream.jpg" />-->
           </div>
           <div class="col-3" id="infoticker">
             <div class="card">
