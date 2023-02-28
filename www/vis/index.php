@@ -83,7 +83,7 @@
       <div class="container-fluid">
         <div class="row" id="header-row">
           <class class="col-2">
-            <img src="logo.png">
+            <img src="logo.png" style="heigth:20px">
           </class>
           <div class="col-6">
             <span>aktuelle Aufsicht: <span id="aufsicht"></span></span>
