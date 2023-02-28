@@ -1,12 +1,9 @@
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.108.0">
-    <title>Sticky Footer Template · Bootstrap v5.3</title>
+    <title>MeyShot VIS</title>
 
     <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer/">-->
     <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
