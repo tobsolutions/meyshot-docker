@@ -118,7 +118,11 @@
                       $result = mysqli_query($link_meyshot_server, $sql);
 
                       while ($row = mysqli_fetch_array($result)) {
+                        if($row[0] != ""){
                           echo $row[0];
+                        } else {
+                          echo "keine Aufsicht";
+                        }
                       }
 
                       mysqli_free_result($result);
