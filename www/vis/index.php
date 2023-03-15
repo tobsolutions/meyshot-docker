@@ -141,6 +141,7 @@
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="16" aria-label="Slide 17"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="17" aria-label="Slide 18"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="18" aria-label="Slide 19"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="19" aria-label="Slide 20"></button>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -218,6 +219,10 @@
                 <div class="carousel-item">
                   <span>Mit freundlicher Unterstützung</br> </span>
                   <strong>Stefan Joser Holzbau</strong>
+                </div>
+                <div class="carousel-item">
+                  <span>Mit freundlicher Unterstützung</br> </span>
+                  <strong>systemzwo group</strong>
                 </div>
               </div>
             </div>
