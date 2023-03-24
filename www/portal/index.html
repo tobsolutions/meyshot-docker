@@ -98,30 +98,50 @@
   <body class="d-flex flex-column h-100">
     <!-- Begin page content -->
     <main class="flex-shrink-0">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="lana-tab" data-bs-toggle="tab" data-bs-target="#lana" type="button" role="tab" aria-controls="lana" aria-selected="true">LANA Standbelegung</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="ergebnisse-tab" data-bs-toggle="tab" data-bs-target="#ergebnisse" type="button" role="tab" aria-controls="ergebnisse" aria-selected="false">Ergebnisse</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="webseite-tab" data-bs-toggle="tab" data-bs-target="#webseite" type="button" role="tab" aria-controls="webseite" aria-selected="false">Webseite Schützenverein Tiefenbach</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="festseite-tab" data-bs-toggle="tab" data-bs-target="#festseite" type="button" role="tab" aria-controls="festseite" aria-selected="false">Festseite 125 Jahre Schützen Tiefenbach</button>
-        </li>
-      </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9" style="padding-right: 0px;">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link tab-link active" id="lana-tab" data-bs-toggle="tab" data-bs-target="#lana" type="button" role="tab" aria-controls="lana" aria-selected="true">LANA Standbelegung</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link tab-link" id="ergebnisse-tab" data-bs-toggle="tab" data-bs-target="#ergebnisse" type="button" role="tab" aria-controls="ergebnisse" aria-selected="false">Ergebnisse</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link tab-link" id="webseite-tab" data-bs-toggle="tab" data-bs-target="#webseite" type="button" role="tab" aria-controls="webseite" aria-selected="false">Webseite Schützenverein Tiefenbach</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link tab-link" id="festseite-tab" data-bs-toggle="tab" data-bs-target="#festseite" type="button" role="tab" aria-controls="festseite" aria-selected="false">Festseite 125 Jahre Schützen Tiefenbach</button>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2" style="padding-left: 0px;"">
+            <ul class="nav nav-tabs justify-content-end">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" onclick="iframereload()">&#x21bb;</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+      
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="lana" role="tabpanel" aria-labelledby="lana-tab">
-          <iframe src="http://192.168.10.200" name="SELFHTML_in_a_box" onload="iframeanpassen(this)"></iframe>
+          <iframe src="http://192.168.10.200" id="lana-frame" name="lana-frame" onload="iframeanpassen(this)">
+            <p>LANA steht derzeit nicht zur Verfügung. Es kann keine Verbindung zum Meyton-Server hergestellt werden.</p>
+          </iframe>
         </div>
-        <div class="tab-pane fade" id="ergebnisse" role="tabpanel" aria-labelledby="ergebnisse-tab">...</div>
+        <div class="tab-pane fade" id="ergebnisse" role="tabpanel" aria-labelledby="ergebnisse-tab">
+          ...
+        </div>
         <div class="tab-pane fade" id="webseite" role="tabpanel" aria-labelledby="webseite-tab">
-          <iframe src="http://www.schuetzenverein-tiefenbach.de" name="SELFHTML_in_a_box" onload="iframeanpassen(this)"></iframe>
+          <iframe src="http://www.schuetzenverein-tiefenbach.de" id="webseite-frame" name="webseite-frame" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
         </div>
         <div class="tab-pane fade" id="festseite" role="tabpanel" aria-labelledby="festseite-tab">
-          <iframe src="http://www.125jahre-schuetzen-tiefenbach.info" name="SELFHTML_in_a_box" onload="iframeanpassen(this)"></iframe>
+          <iframe src="http://www.125jahre-schuetzen-tiefenbach.info" id="festseite-frame" name="festseite-frame" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
         </div>
       </div>
     </main>
@@ -255,24 +275,20 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script>
       $(document).ready(function() {
-        if(window.location.pathname.split(".")[1] == "html"){
-          document.getElementById("stream").src = "stream.jpg";
-        } else {
-          refresh();
-          setInterval(function() {
-          refresh();
-          }, 10000);
+        var elements = document.getElementsByClassName("tab-link");
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].addEventListener('click', function(event){
+            iframeanpassen(document.getElementById(event.target.id.split("-tab")[0]+"-frame"));
+          }, false);
         }
       });
   
-      function refresh() {
-        $("#infoticker").load("infoticker.php");
-        $("#aufsicht").load("aufsicht.php");
+      function iframereload() {
+        console.log(document.getElementsByClassName("active")[0].id.split("-tab")[0]+"-frame");
+        document.getElementById(document.getElementsByClassName("active")[0].id.split("-tab")[0]+"-frame").src = document.getElementById(document.getElementsByClassName("active")[0].id.split("-tab")[0]+"-frame").src;
       }     
       
       function iframeanpassen(iframe){
-        console.log("iframe:"+window.innerHeight);
-        console.log("footer:"+document.querySelector(".footer").offsetHeight);
         var h = window.innerHeight-document.querySelector(".footer").offsetHeight-50
         iframe.style.height=h+'px';
       }
