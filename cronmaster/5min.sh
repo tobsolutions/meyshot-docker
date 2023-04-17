@@ -37,10 +37,9 @@ echo "- `date -u` Daten von SMB-Freigabe werden heruntergeladen";
 cd /usr/local/bin/html;
 rm *;
 smbclient //192.168.10.200/html -N -c 'prompt; mget *'
-cd /usr/local/bin/ergebnis/PDF;
-smbclient //192.168.10.200/ergebnis/PDF -N -c 'prompt; mget *'
-cd /usr/local/bin/ergebnis/HTML;
-smbclient //192.168.10.200/ergebnis/HTML -N -c 'prompt; mget *'
+cd /usr/local/bin/ergebnis;
+rm *;
+smbclient //192.168.10.200/ergebnis -N -c 'prompt; mget *'
 cd ..
  
 #echo "- `date -u` Daten werden auf FTP-Server für DorfCup hochgeladen";
