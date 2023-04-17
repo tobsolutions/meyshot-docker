@@ -44,6 +44,7 @@ cd ..
 #cd ./html; 
 echo "- `date -u` Daten werden auf FTP-Server für DorfCup hochgeladen";
 ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup /usr/local/bin/html
+ncftpput -R -v -u "svtieba125" -p "1f4p7W7^q" h2790537.stratoserver.net /httpdocs/ergebnisse /usr/local/bin/html
 
 echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
 ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /meytonsmb /usr/local/bin/ergebnis/PDF
