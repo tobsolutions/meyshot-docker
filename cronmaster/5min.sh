@@ -21,7 +21,7 @@ echo "- `date -u` mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2
 mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_db -f < /usr/local/bin/SSMDB2.sql
 
 echo "- `date -u` Setze Uploaddatum auf Webserver..";
-echo "- `date -u` mysql -hsqldb -uroot -pmc4hct MEYSHOT -e 'INSERT INTO Upload (Uploaddatum) VALUES (CURRENT_TIMESTAMP)'";
+echo "- `date -u` mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -e 'INSERT INTO Upload (Uploaddatum) VALUES (CURRENT_TIMESTAMP)'";
 mysql -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot -e 'INSERT INTO `Upload` (`Uploaddatum`) VALUES (CURRENT_TIMESTAMP)'
 echo "- `date -u` Dump wird vom Webserver aus MEYSHOT-Datenbank erstellt..";
 echo "- `date -u` mysqldump -h$ssmdb2_host -u$ssmdb2_user -p$ssmdb2_password $ssmdb2_meyshot > /usr/local/bin/MEYSHOT.sql";
@@ -44,6 +44,8 @@ cd ..
 #cd ./html; 
 echo "- `date -u` Daten werden auf FTP-Server für DorfCup hochgeladen";
 ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup /usr/local/bin/html
+
+echo "- `date -u` Daten werden auf FTP-Server für Jedermannschiessen hochgeladen";
 ncftpput -R -v -u "svtieba125" -p "1f4p7W7^q" h2790537.stratoserver.net /httpdocs/ergebnisse /usr/local/bin/html
 
 echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
