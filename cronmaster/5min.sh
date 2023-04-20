@@ -38,8 +38,8 @@ cd /usr/local/bin/html;
 rm *;
 smbclient //192.168.10.200/html -N -c 'prompt; mget *'
 cd /usr/local/bin/ergebnis;
-rm *;
-smbclient //192.168.10.200/ergebnis -N -c 'prompt; mget *'
+rm -r *;
+smbclient //192.168.10.200/ergebnis -N -c 'prompt; recurse; mget *'
 cd ..
  
 #echo "- `date -u` Daten werden auf FTP-Server für DorfCup hochgeladen";
