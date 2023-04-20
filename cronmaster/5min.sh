@@ -39,7 +39,7 @@ rm *;
 smbclient //192.168.10.200/html -N -c 'prompt; mget *'
 cd /usr/local/bin/ergebnis/PDF;
 rm *;
-smbclient //192.168.10.200/ergebnis/PDF -N -c 'prompt; mget *'
+smbclient //192.168.10.200/ergebnis -N -c 'prompt; mget PDF'
 cd /usr/local/bin/ergebnis/HTML;
 rm *;
 smbclient //192.168.10.200/ergebnis/HTML -N -c 'prompt; mget *'
@@ -48,7 +48,7 @@ cd ..
 #echo "- `date -u` Daten werden auf FTP-Server für DorfCup hochgeladen";
 #ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /dorfcup /usr/local/bin/html
 
-echo "- `date -u` Daten werden auf FTP-Server für Jedermannschiessen hochgeladen";
+echo "- `date -u` Daten werden auf FTP-Server für Jubilaeumsschiessen hochgeladen";
 ncftpput -R -v -u "svtieba125" -p "1f4p7W7^q" h2790537.stratoserver.net /httpdocs/ergebnisse /usr/local/bin/html
 
 echo "- `date -u` Daten werden auf FTP-Server hochgeladen";
