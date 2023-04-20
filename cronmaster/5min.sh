@@ -39,7 +39,7 @@ rm *;
 smbclient //192.168.10.200/html -N -c 'prompt; mget *'
 cd /usr/local/bin/ergebnis/PDF;
 rm *;
-smbclient //192.168.10.200/ergebnis -N -c 'prompt; cd PDF; mget *'
+smbclient //192.168.10.200/ergebnis -N -c 'prompt; cd PDF; recurse; mget *'
 cd /usr/local/bin/ergebnis/HTML;
 rm *;
 smbclient //192.168.10.200/ergebnis/HTML -N -c 'prompt; mget *'
