@@ -244,8 +244,8 @@
         } else {
           refresh();
           setInterval(function() {
-          refresh();
-          }, 10000);
+            refresh();
+          }, 30000);
         }
       });
   
