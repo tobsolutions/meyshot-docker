@@ -251,7 +251,7 @@
   
       function refresh() {
         $("#infoticker").load("infoticker.php");
-        $("#aufsicht").load("aufsicht.php");
+        //$("#aufsicht").load("aufsicht.php");
       }      
     </script>
   </body>
