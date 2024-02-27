@@ -116,7 +116,7 @@
           <div class="col-1">
             <img src="img/logo.png" style="width:100%;">
           </div>
-          <div class="col-1">
+          <!--<div class="col-1">
             <img src="img/schuetzafest.png" style="width:100%;">
           </div>
           <div class="col-3" style="padding-bottom: 10px;">
@@ -230,7 +230,7 @@
           </div>
           <div class="col-7" style="padding-bottom: 10px;">
             <img src="img/hauptsponsoren.png" width="100%">
-          </div>
+          </div>-->
         </div>
       </div>
     </footer>
@@ -245,7 +245,7 @@
           refresh();
           setInterval(function() {
             refresh();
-          }, 30000);
+          }, 300000);
         }
       });
   
