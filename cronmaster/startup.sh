@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo "- `date -u` crontab -r"
+crontab -r
+
 echo "- `date -u` starting startup.sh.." >> /proc/1/fd/1
 echo  -e  "$(crontab -l)\n*/1 * * * * /usr/local/1min.sh" | crontab -
 echo  -e  "$(crontab -l)\n*/5 * * * * /usr/local/5min.sh" | crontab -
