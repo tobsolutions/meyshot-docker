@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "abc"
 
 echo "- `date -u` crontab -r"
 crontab -r
