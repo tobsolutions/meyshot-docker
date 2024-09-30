@@ -44,6 +44,5 @@ ncftpput -R -v -u "svtieba" -p "IkOowINN82M%6e7af" h2790537.stratoserver.net /do
 
 #echo "- `date -u` HTML Daten werden auf FTP-Server für Jubilaeumsschiessen hochgeladen";
 #ncftpput -R -v -u "svtieba125" -p "1f4p7W7^q" h2790537.stratoserver.net /httpdocs/ergebnisse /usr/local/bin/html
-echo "abc"
 
 

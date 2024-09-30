@@ -1,5 +1,5 @@
 -- MySQL dump 10.16  Distrib 10.2.32-MariaDB, for Linux (x86_64)
--- echo "abc"
+-- 
 -- Host: ssmdb2    Database: ssmdb2
 -- ------------------------------------------------------
 -- Server version	8.0.28
