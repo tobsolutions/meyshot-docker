@@ -1,6 +1,6 @@
 FROM alpine:3.8
 
-# Configure cron echo "abc"
+# Configure cron
 COPY . /usr/local
 
 # Init cron
