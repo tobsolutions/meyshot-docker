@@ -79,6 +79,8 @@
       .py-3{
         padding-bottom: 0px !important;
       }
+
+      .col-empty, .col:empty, [class^=col-]:empty { display: none; }
     </style>
     <!-- Custom styles for this template -->
   </head>
