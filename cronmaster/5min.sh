@@ -11,8 +11,8 @@ ssmdb2_meyshot=MEYSHOT
 
 echo "- `date -u` ### SSMDB2 MEYSHOT Upload ###";
 echo "- `date -u` Dump wird aus SSMDB2-Datenbank erstellt..";
-echo "- `date -u` mysqldump -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql";
-mysqldump -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
+echo "- `date -u` mysqldump --single-transaction -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql";
+mysqldump --single-transaction -h192.168.10.200 -umeyton -pmc4hct SSMDB2 > /usr/local/bin/SSMDB2.sql
 echo "- `date -u` Dump wird lokal eingespielt..";
 echo "- `date -u` mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql";
 mysql -hsqldb -uroot -pmc4hct SSMDB2 -f < /usr/local/bin/SSMDB2.sql
