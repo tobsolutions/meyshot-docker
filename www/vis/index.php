@@ -97,10 +97,10 @@
           </div>
         </div>
         <div class="row" id="content">
-          <div class="col-9">
+          <div class="col col-9">
             <img id="stream" style="width: 100%; height: auto;" src="http://192.168.10.222:8090/?action=stream" />
           </div>
-          <div class="col-3" id="infoticker">
+          <div class="col col-3" id="infoticker">
             <div class="card">
               <div class="card-body">
                 <p class="card-text">Suche Informationen ..
