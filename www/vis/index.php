@@ -107,7 +107,7 @@
                 </div>
               </div>
             </div> 
-            <div id="ergebniss">
+            <div id="ergebnisse">
               <div class="card">
                 <div class="card-body">
                   <p class="card-text">Ergebnisse werden geladen ..
