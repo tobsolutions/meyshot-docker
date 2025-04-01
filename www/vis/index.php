@@ -108,8 +108,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
-            Ergebnisse
+          <div class="col-12" id="ergebnisse">
+            Ergebnisse werden geladen ..
           </div>
         </div>
       </div>
@@ -256,6 +256,7 @@
   
       function refresh() {
         $("#infoticker").load("infoticker.php");
+        $("#ergebnisse").load("ergenisse.php");
         //$("#aufsicht").load("aufsicht.php");
       }      
     </script>

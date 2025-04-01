@@ -10,7 +10,7 @@ if ( ! $result )
 while ($row = mysqli_fetch_array($result)) {
     echo '<div class="card">';
     echo '<div class="card-body">';
-    echo '<h5 class="card-title">' . $row['Nachname'] . '</h5>';
+    echo '<h5 class="card-title">' . $row['Nachname'] . ' ' . $row['Vorname'] .'</h5>';
     echo '<p class="card-text">';
     echo $row['StandNr'];
     echo '</p>';
