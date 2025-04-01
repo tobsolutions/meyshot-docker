@@ -1,6 +1,6 @@
 <?php
 require('dbconnect.php');
-$sql = 'SELECT * FROM Scheiben WHERE Nachname <> "" AND Zeitstempel > "' . date_format(date_create("28-03-2025"), "d-m-Y H:i:s") . '" ORDER BY Nachname, Vorname ASC LIMIT 50';
+$sql = 'SELECT * FROM Scheiben WHERE Nachname <> "" AND Zeitstempel > "' . date_format(date_create("28-03-2025"), "Y-m-d H:i:s") . '" ORDER BY Nachname, Vorname ASC LIMIT 50';
 $result = mysqli_query($link_ssmdb2, $sql);
 if ( ! $result )
 {
