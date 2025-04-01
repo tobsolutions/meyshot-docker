@@ -1,6 +1,6 @@
 <?php
 require('dbconnect.php');
-$sql = 'SELECT * FROM Scheiben ORDER BY Zeitstempel DESC LIMIT 50';
+$sql = 'SELECT * FROM Scheiben WHERE Nachname <> "" ORDER BY Zeitstempel DESC LIMIT 50';
 $result = mysqli_query($link_ssmdb2, $sql);
 if ( ! $result )
 {
