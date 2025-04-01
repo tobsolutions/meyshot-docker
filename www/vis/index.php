@@ -256,7 +256,7 @@
   
       function refresh() {
         $("#infoticker").load("infoticker.php");
-        $("#ergebnisse").load("ergenisse.php");
+        $("#ergebnisse").load("ergebnisse.php");
         //$("#aufsicht").load("aufsicht.php");
       }      
     </script>
