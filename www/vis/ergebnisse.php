@@ -1,6 +1,6 @@
 <?php
 require('dbconnect.php');
-$sql = 'SELECT * FROM Scheiben WHERE Nachname <> "" AND Zeitstempel > "' . date_format(date_create("28-03-2025"), "Y-m-d H:i:s") . '" ORDER BY Nachname, Vorname ASC LIMIT 50';
+$sql = 'SELECT * FROM Scheiben WHERE Nachname <> "" AND Zeitstempel > "' . Date("Y-m-d")  . '" ORDER BY Nachname, Vorname ASC LIMIT 50';
 $result = mysqli_query($link_ssmdb2, $sql);
 if ( ! $result )
 {
@@ -9,7 +9,7 @@ if ( ! $result )
 
 echo '<div class="card">';
 echo '<div class="card-body">';
-echo '<h5 class="card-title">Ergebnisse des Tages</h5>' . date_format(date_create("28-03-2025"), "Y-m-d H:i:s");
+echo '<h5 class="card-title">Ergebnisse des Tages</h5>';
 echo '<p class="card-text">';
 while ($row = mysqli_fetch_array($result)) {
     echo '<b>' . $row['Nachname'] . ' ' . $row['Vorname'] . '</b> ' . $row['TotalRing']/10 . ' (' . $row['TotalRing01']/10 . ')</br>';
@@ -21,7 +21,8 @@ echo '</div>';
 
 mysqli_free_result($result);
 
-//Date("Y-m-d") 
+//Date("Y-m-d")  aktuelels Datum
+//date_format(date_create("28-03-2025"), "Y-m-d H:i:s") bestimmtes Datum
 ?>
 
 
