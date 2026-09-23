@@ -85,6 +85,14 @@
         flex-direction: column;
         height: 100vh; /* Volle Bildschirmhöhe */
       }
+
+      .infoticker{
+        flex-shrink: 0;
+      }
+
+      .ergebnisse{
+        flex: 1;
+      }
     </style>
     <!-- Custom styles for this template -->
   </head>
