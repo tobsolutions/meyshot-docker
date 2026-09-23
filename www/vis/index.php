@@ -83,7 +83,7 @@
       #rechtespalte{
         display: flex;
         flex-direction: column;
-        height: 100vh; /* Volle Bildschirmhöhe */
+        height: 90vh; /* Volle Bildschirmhöhe */
       }
 
       #infoticker{
