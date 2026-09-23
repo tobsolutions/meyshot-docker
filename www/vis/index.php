@@ -79,6 +79,12 @@
       .py-3{
         padding-bottom: 0px !important;
       }
+
+      .rechtespalte{
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Volle Bildschirmhöhe */
+      }
     </style>
     <!-- Custom styles for this template -->
   </head>
@@ -98,7 +104,7 @@
           <div class="col-9">
             <img id="stream" style="width: 100%; height: auto;" src="http://192.168.10.222:8090/?action=stream" />
           </div>
-          <div class="col-3">
+          <div id="rechtespalte" class="col-3">
             <div id="infoticker">
               <div class="card">
                 <div class="card-body">
