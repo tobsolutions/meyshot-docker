@@ -282,7 +282,7 @@
 
       
       const box = document.getElementById('ergebnisse');
-      let scrollSpeed = 1; // Geschwindigkeit (höher = schneller)
+      let scrollSpeed = 3; // Geschwindigkeit (höher = schneller)
       let scrollInterval;
       
       function startScroll() {
