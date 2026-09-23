@@ -278,7 +278,34 @@
         $("#infoticker").load("infoticker.php");
         $("#ergebnisse").load("ergebnisse.php");
         //$("#aufsicht").load("aufsicht.php");
-      }      
+      }   
+
+      
+      const box = document.getElementById('ergebnisse');
+      let scrollSpeed = 1; // Geschwindigkeit (höher = schneller)
+      let scrollInterval;
+      
+      function startScroll() {
+          scrollInterval = setInterval(() => {
+              // Wenn unten angekommen, zurück nach oben springen
+              if (box.scrollTop + box.clientHeight >= box.scrollHeight) {
+                  box.scrollTop = 0; 
+              } else {
+                  box.scrollTop += scrollSpeed;
+              }
+          }, 30); // Intervall in Millisekunden
+      }
+      
+      function stopScroll() {
+          clearInterval(scrollInterval);
+      }
+      
+      // Event-Listener für automatisches Starten und Stoppen bei Maus-Kontakt
+      box.addEventListener('mouseenter', stopScroll);
+      box.addEventListener('mouseleave', startScroll);
+      
+      // Start beim Laden der Seite
+      startScroll();
     </script>
   </body>
 </html>
