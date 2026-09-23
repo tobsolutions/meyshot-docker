@@ -80,17 +80,17 @@
         padding-bottom: 0px !important;
       }
 
-      .rechtespalte{
+      #rechtespalte{
         display: flex;
         flex-direction: column;
         height: 100vh; /* Volle Bildschirmhöhe */
       }
 
-      .infoticker{
+      #infoticker{
         flex-shrink: 0;
       }
 
-      .ergebnisse{
+      #ergebnisse{
         flex-grow: 1;
         overflow-y: auto;
       }
