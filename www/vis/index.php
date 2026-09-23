@@ -91,7 +91,8 @@
       }
 
       .ergebnisse{
-        flex: 1;
+        flex-grow: 1;
+        overflow-y: auto;
       }
     </style>
     <!-- Custom styles for this template -->
