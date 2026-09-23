@@ -1,7 +1,7 @@
 <?php
 require('dbconnect.php');
 //$sql = 'SELECT * FROM Scheiben WHERE Nachname <> "" AND Zeitstempel > "' . Date("Y-m-d")  . '" ORDER BY Nachname, Vorname ASC LIMIT 50';
-$sql = 'SELECT * DISTINCT StartNr FROM Scheiben WHERE Nachname <> "" AND Zeitstempel > "' . Date("Y-m-d")  . '" ORDER BY Nachname, Vorname ASC GROUP BY StartNr LIMIT 50';
+$sql = 'SELECT * FROM Scheiben WHERE Nachname <> "" AND Zeitstempel > "' . Date("Y-m-d")  . '" ORDER BY Nachname, Vorname ASC GROUP BY StartNr LIMIT 50';
 $result = mysqli_query($link_ssmdb2, $sql);
 if ( ! $result )
 {
