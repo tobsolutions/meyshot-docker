@@ -286,7 +286,7 @@
       }   
 
       
-      const box = document.getElementById('ergebnissecontent');
+      const box = document.getElementById('ergebnisse');
       let scrollSpeed = 2; // Geschwindigkeit (höher = schneller)
       let scrollInterval;
       
