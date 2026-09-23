@@ -90,7 +90,7 @@
         flex-shrink: 0;
       }
 
-      #ergebnisse{
+      #ergebnissecontent{
         flex-grow: 1;
         overflow-y: auto;
       }
