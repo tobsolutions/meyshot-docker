@@ -94,6 +94,11 @@
         flex-grow: 1;
         overflow-y: auto;
       }
+
+      #ergebnissecontent{
+        flex-grow: 1;
+        overflow-y: auto;
+      }
     </style>
     <!-- Custom styles for this template -->
   </head>
